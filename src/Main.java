@@ -1,18 +1,22 @@
 
 public class Main {
     public static void main(String[] args) {
-        String name = "Betelgeuse";
+        String input = "Betelgeuse Rocks!!!";
 
-        String name2 = "Be";
-        name2 += "tel";
-        name2 += "geuse";
+        System.out.println(input.toUpperCase());
+        System.out.println(input.toLowerCase());
+        System.out.println(input);
+//        if (input.endsWith("geuse"))
+//            System.out.println("Correct!");
+//        else
+//            System.out.println("Nope");
 
-        if (name == name2)
-            System.out.println("Same reference");
-
-        if (name.equals(name2))
-            System.out.println("Same value");
-        // like 2 copies of the same file
+//        char letter = input.charAt(input.length() - 1);
+//        int i = input.lastIndexOf("up");
+//        System.out.println(letter);
+        //        if (input.endsWith(""))
+//            System.out.println("Returns true");
+//        else
+//            System.out.println("returns false");
     }
-
 }
