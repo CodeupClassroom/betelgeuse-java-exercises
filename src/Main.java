@@ -18,5 +18,23 @@ public class Main {
 //            System.out.println("Returns true");
 //        else
 //            System.out.println("returns false");
+
+//      These are some methods on the String class
+//        .equals()
+//        .equalsIgnoreCase()
+//        .startsWith()
+//        .endsWith()
+//        .charAt()
+//        .indexOf()
+//        .lastIndexOf()
+//        .length()
+//        .toLowerCase()
+//        .toUpperCase()
+//      We didn't talk about these during the lesson:
+//        .replace()
+//        .substring()
+//        .trim()
+
+
     }
 }
