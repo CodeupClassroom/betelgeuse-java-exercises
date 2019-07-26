@@ -1,16 +1,18 @@
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         String name = "Betelgeuse";
-        String greeting = "Salutations";
 
-        Scanner scan = new Scanner(System.in);
+        String name2 = "Be";
+        name2 += "tel";
+        name2 += "geuse";
 
-        System.out.print("Enter something: ");
-        String userInput = scan.nextLine();
+        if (name == name2)
+            System.out.println("Same reference");
 
-        System.out.println("You entered: --> \"" + userInput + "\" <--");
+        if (name.equals(name2))
+            System.out.println("Same value");
+        // like 2 copies of the same file
     }
 
 }
