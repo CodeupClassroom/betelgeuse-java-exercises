@@ -32,5 +32,9 @@ public class Sandbox {
     public static void main(String[] args) {
         fizzBuzz(33);
 
+        Person cody = new Person("Cody the Duck");
+        cody.sayHello();
+        System.out.println(cody.getName());
+
     }
 }
