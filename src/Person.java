@@ -23,11 +23,17 @@ public class Person {
 
     public static void main(String[] args) {
 //        Person person = new Person();
-        Person cody = new Person("Cody the Duck");
-        cody.setName("Cody The Duck");
-//        System.out.println(this.name); There is no this in a static
-        cody.sayHello();
-        System.out.println(cody.name);
-        System.out.println(cody);
+//        Person cody = new Person("Cody the Duck");
+//        cody.setName("Cody The Duck");
+////        System.out.println(this.name); There is no this in a static
+//        cody.sayHello();
+//        System.out.println(cody.name);
+//        System.out.println(cody);
+        int num = 7;
+        Person person1 = new Person("John");
+        Person person2 = new Person("John");
+        person2.setName("Jane");
+        System.out.println(person1.getName().equals(person2.getName()));
+        System.out.println(person1.getName());
     }
 }
