@@ -1,40 +1,25 @@
+import java.util.*;
+
 
 public class Main {
     public static void main(String[] args) {
         String input = "Betelgeuse Rocks!!!";
-
-        System.out.println(input.toUpperCase());
-        System.out.println(input.toLowerCase());
-        System.out.println(input);
-//        if (input.endsWith("geuse"))
-//            System.out.println("Correct!");
-//        else
-//            System.out.println("Nope");
-
-//        char letter = input.charAt(input.length() - 1);
-//        int i = input.lastIndexOf("up");
-//        System.out.println(letter);
-        //        if (input.endsWith(""))
-//            System.out.println("Returns true");
-//        else
-//            System.out.println("returns false");
-
-//      These are some methods on the String class
-//        .equals()
-//        .equalsIgnoreCase()
-//        .startsWith()
-//        .endsWith()
-//        .charAt()
-//        .indexOf()
-//        .lastIndexOf()
-//        .length()
-//        .toLowerCase()
-//        .toUpperCase()
-//      We didn't talk about these during the lesson:
-//        .replace()
-//        .substring()
-//        .trim()
-
-
+//        Scanner scan = new Scanner(System.in);
+//
+//        System.out.print("Enter something: ");
+//        String userInput = scan.nextLine();
+//
+//        System.out.println("You entered: --> \"" + userInput + "\" <--");
+//
+        Sandbox.fizzBuzz(16);
+        Sandbox beach = new Sandbox();
+//        Sandbox squareSandbox = new Sandbox("square");
+        Sandbox hexSandbox = new Sandbox("hexagon");
+//        sandbox.shape = "hexagon";
+//        sandbox.shape = "circle";
+        System.out.println(beach.shape);
+        System.out.println(hexSandbox.shape);
+        beach.play();
+        hexSandbox.play();
     }
 }

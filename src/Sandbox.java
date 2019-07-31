@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
 public class Sandbox {
-    public static String fizzBuzz(int num) {
-        String output = "";
+    public String shape;
+
+    protected static void fizzBuzz(int num) {
         for (int i = 1; i <= num; i++) {
             if (i % 15 == 0) {
                 output += "fizzbuzz\n";
@@ -19,39 +20,25 @@ public class Sandbox {
 //        return;
     }
 
-    private static double multiply(double a, double b) {
 
-        return a * b;
-    }
-    public static void count(int n) {
-        if (n <= 0) {
-            System.out.println("All done!");
-            return;
-        }
-        System.out.println(n);
-        count(n - 1);
+    public Sandbox() {
+        this.shape = "square";
     }
 
-    public static int multiply(int a, int b) {
-        if (a <= 0) {
-            System.out.println("last time: a="+a+ " b="+b);
-            return 0;
-        }
-        System.out.println("a="+a+ " b="+b);
-
-        return b + multiply(a-1, b);
+    public Sandbox(String initialShape) {
+        this.shape = initialShape;
     }
 
+    public void play() {
+        System.out.printf("Yay, this is a fun %s sandbox!!%n", this.shape);
+    }
 
-    public static void main(String[] whateverWeWant) {
-//        String fizz = fizzBuzz(33);
-//        System.out.println(fizz);
+    public static void main(String[] args) {
+        fizzBuzz(33);
 
-//        double product = multiply(7.9,8.3);
-//        System.out.println(product);
-
-        System.out.println(multiply(4,5));
-//        count(5);
+        Person cody = new Person("Cody the Duck");
+        cody.sayHello();
+        System.out.println(cody.getName());
 
     }
 }
