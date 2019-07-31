@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 public class Sandbox {
-    static void fizzBuzz(int num) {
+    public String shape;
+
+    protected static void fizzBuzz(int num) {
         for (int i = 1; i <= num; i++) {
             if (i % 15 == 0) {
                 System.out.println("fizzbuzz");
@@ -13,6 +15,18 @@ public class Sandbox {
                 System.out.println(i);
             }
         }
+    }
+
+    public Sandbox() {
+        this.shape = "square";
+    }
+
+    public Sandbox(String initialShape) {
+        this.shape = initialShape;
+    }
+
+    public void play() {
+        System.out.printf("Yay, this is a fun %s sandbox!!%n", this.shape);
     }
 
     public static void main(String[] args) {
