@@ -10,27 +10,27 @@ public class Input {
         this.scanner = new Scanner(System.in);
     }
 
-    String getString() {
+    public String getString() {
         return this.scanner.nextLine();
     }
-    String getString(String prompt) {
+    public String getString(String prompt) {
         System.out.println(prompt);
         return this.getString();
     }
 
-    boolean yesNo() {
+    public boolean yesNo() {
         String answer = this.scanner.nextLine();
         if (answer.equalsIgnoreCase("y")
                 || answer.equalsIgnoreCase("yes")) {
             return true;
         } else return false;
     }
-    boolean yesNo(String prompt) {
+    public boolean yesNo(String prompt) {
         System.out.println(prompt);
         return this.yesNo();
     }
 
-    int getInt(int min, int max) {
+    public int getInt(int min, int max) {
         do {
             System.out.printf("Please enter a number between %d and %d : ", min, max);
             int answer = this.scanner.nextInt();
@@ -40,15 +40,15 @@ public class Input {
         } while (true);
     }
 
-    int getInt() {
+    public int getInt() {
         return this.scanner.nextInt();
     }
-    int getInt(String prompt) {
+    public int getInt(String prompt) {
         System.out.println(prompt);
         return this.getInt();
     }
 
-    double getDouble(double min, double max) {
+    public double getDouble(double min, double max) {
         do {
             System.out.printf("Please enter a number between %d and %d : ", min, max);
             double answer = this.scanner.nextDouble();
@@ -58,10 +58,10 @@ public class Input {
         } while (true);
 
     }
-    double getDouble() {
+    public double getDouble() {
         return this.scanner.nextDouble();
     }
-    double getDouble(String prompt) {
+    public double getDouble(String prompt) {
         System.out.println(prompt);
         return this.getDouble();
     }
