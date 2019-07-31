@@ -6,16 +6,20 @@ public class Sandbox {
     protected static void fizzBuzz(int num) {
         for (int i = 1; i <= num; i++) {
             if (i % 15 == 0) {
-                System.out.println("fizzbuzz");
+                output += "fizzbuzz\n";
             } else if (i%5==0) {
-                System.out.println("buzz");
+                output += "buzz\n";
             } else if (i%3==0) {
-                System.out.println("fizz");
+                output += "fizz\n";
             } else {
-                System.out.println(i);
+                output += i + "\n";
             }
         }
+        multiply(1,2);
+        return output;
+//        return;
     }
+
 
     public Sandbox() {
         this.shape = "square";

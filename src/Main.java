@@ -1,13 +1,9 @@
-
-
 import java.util.*;
 
 
 public class Main {
     public static void main(String[] args) {
-        String name = "Betelgeuse";
-        String greeting = "Salutations";
-
+        String input = "Betelgeuse Rocks!!!";
 //        Scanner scan = new Scanner(System.in);
 //
 //        System.out.print("Enter something: ");
@@ -26,5 +22,4 @@ public class Main {
         beach.play();
         hexSandbox.play();
     }
-
 }
