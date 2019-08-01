@@ -9,7 +9,7 @@ public class StringExercise {
 
         System.out.println(message);
 
-        System.out.println(Sandbox.fizzBuzz(30));
+//        System.out.println(Sandbox.fizzBuzz(30));
 
 
     }

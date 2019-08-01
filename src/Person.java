@@ -5,6 +5,7 @@ public class Person {
     public Person(String name) {
         this.name = name;
     }
+    public Person(){}
 
     // returns the person's name
     public String getName() {
