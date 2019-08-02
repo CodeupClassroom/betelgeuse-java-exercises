@@ -12,5 +12,9 @@ public class Accountant extends Employee {
     }
 
 
-
+    @Override
+    public String[] copies() {
+        System.out.println("copies of payrolls");
+        return new String[1];
+    }
 }

@@ -1,6 +1,6 @@
 package interfaces_examples;
 
-abstract class Employee {
+abstract class Employee implements OfficeMGMT{
     private double salary;
     protected String name;
     protected String dpt;
