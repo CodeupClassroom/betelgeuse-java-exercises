@@ -4,6 +4,7 @@ public class Developer extends Employee implements WritesCode  {
 
     public Developer(double salary, String name, String dpt) {
         super(salary, name, dpt);
+
     }
 
     @Override
