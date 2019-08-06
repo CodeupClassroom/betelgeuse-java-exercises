@@ -30,15 +30,24 @@ public class GradesApplication {
 
         showStudents();
 
-        String key = input.getString("What student would you like to see more information on?");
+        boolean cont = true;
 
-        if(students.containsKey(key)){
-            System.out.println("Name: "+ students.get(key).getName() +" - GitHub Username: " + key );
-            System.out.println("Current Average: " + students.get(key).getGradeAverage());
-        } else {
-            System.out.println("Sorry, no student found with the GitHub username of " + key);
-        }
+        do{
 
+            String key = input.getString("What student would you like to see more information on?");
+
+            if(students.containsKey(key)){
+                System.out.println("Name: "+ students.get(key).getName() +" - GitHub Username: " + key );
+                System.out.println("Current Average: " + students.get(key).getGradeAverage());
+            } else {
+                System.out.println("Sorry, no student found with the GitHub username of " + key);
+            }
+
+            cont = input.yesNo("Would you like to see another student?");
+
+        }while(cont);
+
+        System.out.println("Goodbye, and have a wonderful day!\n");
 
     }
 
