@@ -13,6 +13,7 @@ public class Input {
     public String getString() {
         return this.scanner.nextLine();
     }
+
     public String getString(String prompt) {
         System.out.println(prompt);
         return this.getString();
@@ -30,28 +31,50 @@ public class Input {
         return this.yesNo();
     }
 
-    public int getInt(int min, int max) {
-        do {
-            System.out.printf("Please enter a number between %d and %d : ", min, max);
-            int answer = this.scanner.nextInt();
-            if (answer >= min && answer <= max) {
-                return answer;
-            }
-        } while (true);
-    }
-
     public int getInt() {
-        return this.scanner.nextInt();
+        String answer;
+        answer = this.scanner.nextLine();
+        try {
+            return Integer.valueOf(answer);
+        } catch (NumberFormatException ex) {
+            System.out.printf("%s is not an integer%n", answer);
+            return getInt();
+        }
     }
     public int getInt(String prompt) {
         System.out.println(prompt);
         return this.getInt();
     }
 
-    public double getDouble(double min, double max) {
+    public int getInt(int min, int max) {
         do {
             System.out.printf("Please enter a number between %d and %d : ", min, max);
-            double answer = this.scanner.nextDouble();
+
+            String input = this.scanner.nextLine();
+            int answer;
+            try {
+                answer = Integer.valueOf(input);
+            } catch (NumberFormatException ex) {
+                continue;
+            }
+
+            if (answer >= min && answer <= max) {
+                return answer;
+            }
+        } while (true);
+    }
+
+    public double getDouble(double min, double max) {
+        do {
+            System.out.printf("Please enter a number between %f and %f : ", min, max);
+            String input = this.scanner.nextLine();
+
+            double answer;
+            try {
+                answer = Double.valueOf(input);
+            } catch (NumberFormatException ex) {
+                continue;
+            }
             if (answer >= min && answer <= max) {
                 return answer;
             }
@@ -59,7 +82,14 @@ public class Input {
 
     }
     public double getDouble() {
-        return this.scanner.nextDouble();
+        String answer;
+        answer = this.scanner.nextLine();
+        try {
+            return Double.valueOf(answer);
+        } catch (NumberFormatException ex) {
+            System.out.printf("%s is not a number%n", answer);
+            return getDouble();
+        }
     }
     public double getDouble(String prompt) {
         System.out.println(prompt);
@@ -68,8 +98,9 @@ public class Input {
 
     public static void main(String[] args) {
         Input input = new Input();
-        System.out.println("Enter your answer (y|n)?");
-        System.out.println(input.yesNo());
-        System.out.println(input.getInt(1,10));
+//        System.out.println("Enter your answer (y|n)?");
+//        System.out.println(input.yesNo());
+        System.out.println(input.getDouble());
+
     }
 }
